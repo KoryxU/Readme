@@ -4,10 +4,10 @@ Meu nome é [KoryxU](https://www.roblox.com/users/3632240168/profile), sou desen
 <details>
 <summary>Damage_Indicator</summary>
 
-# About:
+## About:
 Eu criei essa ModuleScript na intenção de ajudar alguns desenvolvedores que não tem muita experiência com .lua no Roblox, que estão querendo criar um jogo de batalha e anime. O código é bem simples de ser usado, é apenas necessário chamar a função ```ApplyIndicator()``` usando o modelo do jogador como argumento, o indicador também pode ser adicionado em qualquer objeto que possua uma Humanoid e um corpo, seja um jogador ou um NPC.
 
-# Server:
+## Server:
 ```lua
 local DamageIndicator = require(game:GetService("ReplicatedStorage").DamageIndicator)
 
@@ -26,7 +26,7 @@ for _, v in pairs(workspace.Npcs:GetChildren()) do
 end
 ```
 
-# Module:
+## Module:
 ```lua
 local TweenService = game:GetService("TweenService")
 
@@ -71,6 +71,6 @@ end
 return DamageIndicator
 ```
 
-# Model:
+## Model:
 https://create.roblox.com/store/asset/16557995812/DamageIndicatorModule
 </details>
