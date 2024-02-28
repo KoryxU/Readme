@@ -1,13 +1,13 @@
 ### Sobre mim:
-Meu nome é [KoryxU](https://www.roblox.com/users/3632240168/profile), sou desenvolvedor de jogos no Roblox, e já trabalhei em alguns projetos. Aqui quero apresentar alguns dos meus trabalhos com .lua dentro do Roblox Studio.
+Meu nome é [KoryxU](https://www.roblox.com/users/3632240168/profile), e aqui vocês podem dar uma olhada em alguns projetos que já fiz no Roblox Studio. Estou há mais ou menos três anos programando e aprendendo LuaU, e aceito qualquer sugestão para melhorar meus códigos, tanto em práticas quanto em legibilidade. 😊
 ### Meus projetos:
 <details>
-<summary>Damage_Indicator</summary>
+<summary>Damage Indicator</summary>
 
-## About:
-Eu criei essa ModuleScript na intenção de ajudar alguns desenvolvedores que não tem muita experiência com .lua no Roblox, que estão querendo criar um jogo de batalha e anime. O código é bem simples de ser usado, é apenas necessário chamar a função ```ApplyIndicator()``` usando o modelo do jogador como argumento, o indicador também pode ser adicionado em qualquer objeto que possua uma Humanoid e um corpo, seja um jogador ou um NPC.
+## Sobre:
+Eu criei essa ModuleScript na intenção de ajudar alguns desenvolvedores que não tem muita experiência com .lua no Roblox, que estão querendo criar um jogo de batalha e anime. O código é bem simples de ser usado, é apenas necessário chamar a função ```ApplyIndicator()``` usando o modelo do jogador como argumento, o indicador também pode ser adicionado em qualquer objeto que possua uma Humanoid e um corpo.
 
-## Server:
+## Script:
 ```lua
 local DamageIndicator = require(game:GetService("ReplicatedStorage").DamageIndicator)
 
@@ -26,7 +26,7 @@ for _, v in pairs(workspace.Npcs:GetChildren()) do
 end
 ```
 
-## Module:
+## ModuleScript:
 ```lua
 local TweenService = game:GetService("TweenService")
 
