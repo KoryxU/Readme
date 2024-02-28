@@ -22,10 +22,7 @@ game:GetService("Players").PlayerAdded:Connect(onPlayerAdded)
 
 for _, v in pairs(workspace.Npcs:GetChildren()) do
 	-- Adicionar o indicador em vários dummy's ou npc's
-	local humanoid = v:FindFirstChild("Humanoid")
-	if not humanoid then return end
-	
-	DamageIndicator.ApplyIndicator(humanoid.Parent)
+	DamageIndicator.ApplyIndicator(v)
 end
 ```
 
