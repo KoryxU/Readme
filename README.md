@@ -74,6 +74,6 @@ end
 return DamageIndicator
 ```
 
-# Source:
+# Model:
 https://create.roblox.com/store/asset/16557995812/DamageIndicatorModule
 </details>
