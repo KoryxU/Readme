@@ -1,5 +1,6 @@
 ### Sobre mim:
 Meu nome é [KoryxU](https://www.roblox.com/users/3632240168/profile), e aqui vocês podem dar uma olhada em alguns projetos que já fiz no Roblox Studio. Estou há mais ou menos três anos programando e aprendendo LuaU, e aceito qualquer sugestão para melhorar meus códigos, tanto em práticas quanto em legibilidade. 😊
+
 ### Meus projetos:
 <details>
 <summary>Damage Indicator</summary>
