@@ -1,5 +1,7 @@
 ### Sobre mim:
-Meu nome é [KoryxU](https://www.roblox.com/users/3632240168/profile), e aqui vocês podem dar uma olhada em alguns projetos que já fiz no Roblox Studio. Estou há mais ou menos três anos programando e aprendendo LuaU, e aceito qualquer sugestão para melhorar meus códigos, tanto em práticas quanto em legibilidade. 😊
+Meu nome é [KoryxU](https://www.roblox.com/users/3632240168/profile), e aqui vocês podem dar uma olhada em alguns projetos que já fiz no Roblox Studio. Estou há mais ou menos três anos programando e aprendendo Luau, e aceito qualquer sugestão para melhorar meus códigos, tanto em práticas quanto em legibilidade. 😊
+
+<img src="https://luau-lang.org/assets/images/luau-88.png">
 
 ### Meus projetos & códigos:
 <details>
