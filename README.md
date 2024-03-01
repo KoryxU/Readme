@@ -76,4 +76,14 @@ return DamageIndicator
 https://create.roblox.com/store/asset/16557995812/DamageIndicatorModule
 </details>
 
+<details>
+<summary>Conqueror's Haki</summary>
+
+## Sobre:
+Este projeto foi desenvolvido por mim para um jogo baseado em One Piece. Embora todos os efeitos sonoros e visuais não tenham sido criados por mim, fui responsável por criar os códigos e a lógica desse Haki. No entanto, não estarei disponibilizando os códigos usados para criar esse Haki, uma vez que foi um trabalho específico para o jogo. Estou compartilhando para que possam conhecer um pouco mais do meu trabalho.
+
+## Vídeo:
+https://github.com/KoryxU/Readme/assets/99298307/729ec6f6-785d-43ac-a2b0-14639e612050
+</details>
+
 <img src="https://luau-lang.org/assets/images/luau-88.png">
