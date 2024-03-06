@@ -157,6 +157,8 @@ for _, v: ProximityPrompt in pairs(CollectionService:GetTagged("ProximityPrompt"
 	end)
 end
 ```
+## Vídeo:
+https://github.com/KoryxU/Readme/assets/99298307/8dc40cbb-d716-4655-8c55-17fca7a650c8
 </details>
 
 <img src="https://luau-lang.org/assets/images/luau-88.png">
