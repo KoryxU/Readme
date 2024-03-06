@@ -86,4 +86,77 @@ Este projeto foi desenvolvido por mim para um jogo baseado em One Piece. Embora 
 https://github.com/KoryxU/Readme/assets/99298307/729ec6f6-785d-43ac-a2b0-14639e612050
 </details>
 
+<details>
+<summary>Highlighting ProximityPrompt</summary>
+
+## Sobre:
+Quando um jogador se aproxima de um objeto com um ProximityPrompt que tem uma tag no CollectionService, o objeto ganha um destaque visual (um “Highlight”). Esse destaque some quando o jogador se afasta, mas quando o jogador aperta o prompt, o objeto fica verde aos poucos.
+
+Esse código foi criado baseado em uma idéia que eu vi em um servidor de desenvolvedores, basta criar um código dentro do ```StarterCharacterScripts```, e colar o código dentro dele.
+
+## LocalScript:
+```lua
+--// Lembre-se, coloque esse script dentro do StarterCharacterScripts.
+--// Esse código foi feito com a idéia de um outro desenvolvedor que eu vi!
+--// Crie uma tag para os seus ProximityPrompt em "Editor de Marcadores", e adicione os prompts na tag.
+local CollectionService = game:GetService("CollectionService")
+local TweenService = game:GetService("TweenService")
+
+local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
+
+for _, v: ProximityPrompt in pairs(CollectionService:GetTagged("ProximityPrompt")) do
+	v.PromptShown:Connect(function(inputType: Enum.ProximityPromptInputType)
+		local target = v.Parent
+		if not target:IsA("BasePart") then return end
+
+		local highlight = (target:FindFirstChild("Highlight") or Instance.new("Highlight"))
+		highlight.FillColor = Color3.fromRGB(68, 255, 0)
+		highlight.FillTransparency = 1
+		highlight.OutlineTransparency = 1
+		highlight.Parent = target
+
+		TweenService:Create(highlight, tweenInfo, {OutlineTransparency = 0}):Play()
+	end)
+	
+	v.PromptButtonHoldBegan:Connect(function(playerWhoTriggered: Player)
+		local highlight = v.Parent:FindFirstChild("Highlight")
+		if not highlight then return end
+
+		local tweenTransparency = TweenService:Create(highlight, TweenInfo.new(v.HoldDuration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0), {FillTransparency = 0.6})
+		tweenTransparency:Play()
+
+		tweenTransparency.Completed:Connect(function(playbackState: Enum.PlaybackState)
+			TweenService:Create(highlight, tweenInfo, {FillTransparency = 1}):Play()
+		end)
+	end)
+	
+	v.PromptButtonHoldEnded:Connect(function(playerWhoTriggered: Player)
+		local highlight = v.Parent:FindFirstChild("Highlight")
+		if not highlight then return end
+
+		TweenService:Create(highlight, tweenInfo, {FillTransparency = 1}):Play()
+	end)
+
+	v.Triggered:Connect(function(playerWhoTriggered: Player)
+		local highlight = v.Parent:FindFirstChild("Highlight")
+		if not highlight or highlight.FillTransparency == 1 then return end
+
+		TweenService:Create(highlight, tweenInfo, {FillTransparency = 1}):Play()
+	end)
+	
+	v.PromptHidden:Connect(function(...)
+		local highlight = v.Parent:FindFirstChild("Highlight")
+		if not highlight then return end
+
+		local tweenTransparency = TweenService:Create(highlight, tweenInfo, {OutlineTransparency = 1})
+		tweenTransparency:Play()
+
+		tweenTransparency.Completed:Connect(function()
+			highlight:Destroy()
+		end)
+	end)
+end
+```
+</details>
+
 <img src="https://luau-lang.org/assets/images/luau-88.png">
